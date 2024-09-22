@@ -42,4 +42,11 @@ public class StudentController {
     ) {
         studentDao.deleteStudent(studentId);
     }
+
+    @PostMapping()
+    public Student addStudent(
+            @RequestBody Student student
+    ) {
+        return studentDao.addStudent(student);
+    }
 }
